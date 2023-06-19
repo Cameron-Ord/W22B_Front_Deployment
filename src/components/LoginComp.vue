@@ -7,6 +7,8 @@
                 <input type="password" placeholder="password" ref="password">
 
                 <button @click="login_form">Log In</button>
+
+                <p v-if="status !== undefined">{{ status }}</p>
             </div>
         </article>
     </div>
@@ -55,7 +57,7 @@ import Cookies from 'vue-cookies';
                 }).catch(err =>{
 
                     //error message on failure
-                    err;
+                    console.log(err);
                     this.status = 'invalid login, try again.';
 
 
@@ -67,6 +69,7 @@ import Cookies from 'vue-cookies';
 
         mounted(){
 
+            this.status=undefined;
 
         }
     }
