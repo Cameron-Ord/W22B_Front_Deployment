@@ -57,7 +57,7 @@ import Cookies from 'vue-cookies';
                 }).catch(err =>{
 
                     //error message on failure
-                    console.log(err);
+                    err;
                     this.status = 'invalid login, try again.';
 
 
